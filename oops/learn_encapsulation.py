@@ -4,7 +4,7 @@ class Base:
         self._a = 2
 
         # private member
-        self.__b = 'private member'
+        self.__b = "private member"
 
     def __test_private_function(self):
         print("I am a private function..")
@@ -15,12 +15,11 @@ class Base:
 
 
 class Derived(Base):
-
     def __init__(self):
         Base.__init__(self)
-        print('Calling protected member of base class')
+        print("Calling protected member of base class")
         print(self._a)
-        print('Calling private member of a base class')
+        print("Calling private member of a base class")
         # print(self.__b) # - this will throw an error
         self.test_public_function()
         # self.__test_private_function() # - can't access private methods outside the class
@@ -35,5 +34,3 @@ print(obj1._a)
 
 obj2 = Derived()  # - can't access private member inside the derived class
 # print(obj2._a)
-
-
